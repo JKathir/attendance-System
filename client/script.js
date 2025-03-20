@@ -2,6 +2,7 @@ function login() {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
+    
     fetch("http://localhost:8001/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
