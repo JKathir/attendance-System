@@ -22,6 +22,7 @@ public class LoginController {
             String token = jwtUtil.generateToken(request.getUsername());
             return ResponseEntity.ok(new AuthResponse(token));
         }
+        //If the username and password wrong send unauthorized msg
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Constants.INVALID_CREDENTIALS);
     }
 }
